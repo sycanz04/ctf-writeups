@@ -10,7 +10,7 @@ So we're given a flag encoded as hex string
 
 ## Hex
 Hex numbers are base-16 (0-9, a-f) are 4 bits each so we can use `bytes.fromhex()` to convert each pair of hex digits into the corresponding bytes since 8 bits makes a byte. Then after that we will decode the returned byte and retrieve our flag.
-```
+```python
 test = bytes.fromhex("63")
 print(test.decode('utf-8')) # Outputs 'c' as hex 63 = c in ASCII table
 ```
