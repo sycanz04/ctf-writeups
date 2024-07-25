@@ -56,9 +56,9 @@ print(f"Flag: {realFlag.decode()}")
 ```
 <br/>
 According to **Associative law** of XOR properties, `A ^ (B ^ C)` == `(A ^ B) ^ C`. So now if we do `KEY1 ^ (KEY2 ^ KEY1)` we will get `KEY2` because `KEY1 ^ KEY1 == 0` and `KEY2 ^ 0 = KEY2` according to the **Self-Inverse** and **Identity** properties. Then after getting `KEY2` we can do the same thing to `KEY2 ^ KEY3` which returns `KEY3`
-<br/>
+<br/><br/>
 Now since we already have `KEY1, KEY2 AND KEY3`, we have to XOR `KEY1 ^ KEY2 ^ KEY3` with `FLAG ^ KEY1 ^ KEY3 ^ KEY2` to retrieve the flag's hex since any value XOR-ing itself will return 0 according to the **Self Inverse properties**
-<br/>
+<br/><br/>
 Once we retrieve the flag's hex. We'll use unhexlify from binascii to convert the hexadecimal string representation to its corresponding bytes and decode it. Below are the output.
 
 ```
